@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <footer class="footer_1_0_0">
+        <div class="container">
+            <div class="footer_1_0_0__inner">
+                <div class="footer_1_0_0__col">
+                    <a href="#" class="footer_1_0_0__logo"><img src="images/logo.png" alt=""></a>
+                </div>
+                <div class="footer_1_0_0__form">
+                    <div class="footer_1_0_0__head">Đăng ký nhận tin</div>
+                    <input type="text" placeholder="Họ & Tên:" class="footer_1_0_0__input">
+                    <input type="text" placeholder="E-mail của bạn:" class="footer_1_0_0__input">
+                    <button class="footer_1_0_0__submit"><img src="images/btn-submit.png" alt=""></button>
+                </div>
+            </div>
+            <div class="footer_1_0_0__inner">
+                <div class="footer_1_0_0__colInfo">
+                    <div class="footer_1_0_0__heading">THÔNG TIN LIÊN HỆ</div>
+                    <p>Điện thoại: 0234.382.5522</p>
+                    <p>Điện thoại: 0234.382.5522</p>
+                    <p>Điện thoại: 0234.382.5522</p>
+                    <p>Điện thoại: 0234.382.5522</p>
+                </div>
+                <div class="footer_1_0_0__colInfo">
+                    <div class="footer_1_0_0__heading">DANH MỤC MENU</div>
+                </div>
+                <div class="footer_1_0_0__colInfo">
+                    <div class="footer_1_0_0__heading">CHÍNH SÁCH HỖ TRỢ</div>
+                </div>
+                <div class="footer_1_0_0__colInfo">
+                    <div class="footer_1_0_0__heading">HÌNH ẢNH DỰ ÁN</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_1_0_0__bottom">
+            <div class="footer_1_0_0__copyright">Copyright © 2023 VCOMQUARTZ</div>
+            <div class="footer_1_0_0__made">Design by Webee Group</div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        let g_interval;
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            scrollHorizontally: true,
+            credits: { enabled: false, label: 'Made with fullPage.js', position: 'right' },
+            slidesNavigation: true,
+            afterLoad: function (origin, destination, direction) {
+                clearInterval(g_interval);
+
+                // 1000 milliseconds lapse
+                const lapse = 5000;
+
+                if (destination.item.querySelectorAll('.slider_1_0_0 .fp-slides').length) {
+                    g_interval = setInterval(function () {
+                        fullpage_api.moveSlideRight();
+                    }, lapse);
+                }
+            }
+        });
+
+        
+    </script>
+</body>
+
+</html>

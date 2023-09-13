@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -34,7 +35,37 @@
                 </div>
             </div>
         </div>
-        <div class="section">Some section</div>
+        <div class="section">
+            <div class="product_1_0_0">
+                <div class="product_1_0_0__main">
+                    <div class="product_1_0_0__box">
+                        <div class="product_1_0_0__head">SẢN PHẨM</div>
+                        <div class="product_1_0_0__name">CALACATTA GOLD</div>
+                        <div class="product_1_0_0__desc">
+                            Calacatta Gold được lấy cảm hứng từ dòng đá cẩm thạch. Calacatta tự nhiên nổi tiếng nhất từ nước Ý với các đường vân trong tông vàng ấn tượng nổi bật bên trên nền trắng làm bừng sáng không gian.
+                        </div>
+                        <div style="position: relative; height: 100px; margin: 10px auto;">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide"><img src="images/stone1.jpg" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/stone1.jpg" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/stone2.jpg" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/stone3.jpg" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/stone4.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <a href="#" class="slider_1_0_0__more">Xem ngay</a>
+                        <a href="#" class="slider_1_0_0__more">Xem toàn bộ</a>
+                    </div>
+                </div>
+                <div class="product_1_0_0__image">
+                    <img src="images/banner-product.jpg" alt="">
+                </div>
+            </div>
+        </div>
         <div class="section">Some section</div>
         <div class="section">
             <div class="slide">
@@ -50,15 +81,25 @@
         </div>
     </div>
 
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
     <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
         let g_interval;
         new fullpage('#fullpage', {
             autoScrolling: true,
             scrollHorizontally: true,
             credits: { enabled: false, label: 'Made with fullPage.js', position: 'right' },
-            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
             slidesNavigation: true,
             afterLoad: function (origin, destination, direction) {
                 clearInterval(g_interval);
@@ -73,6 +114,8 @@
                 }
             }
         });
+
+        
     </script>
 </body>
 

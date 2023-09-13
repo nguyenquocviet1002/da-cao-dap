@@ -5,6 +5,10 @@
     background: url('../images/footer-bg.jpg') no-repeat center;
     &__inner{
         display: flex;
+        &--1{
+            justify-content: center;
+            gap: 30px;
+        }
     }
     &__col{
         width: 50%;
@@ -53,9 +57,26 @@
     &__heading{
         font-weight: 700;
         color: #fff;
+        &--1{
+            text-align: center;
+            margin: 15px 0;
+        }
     }
 
+    &__socialItem{
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
     &__bottom{
         border-top: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        gap: 80px;
+        padding-top: 30px;
+        margin-top: 30px;
     }
 }

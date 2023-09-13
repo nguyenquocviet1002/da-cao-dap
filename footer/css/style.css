@@ -358,6 +358,10 @@ template {
 .footer_1_0_0__inner {
   display: flex;
 }
+.footer_1_0_0__inner--1 {
+  justify-content: center;
+  gap: 30px;
+}
 .footer_1_0_0__col {
   width: 50%;
 }
@@ -409,6 +413,23 @@ template {
   font-weight: 700;
   color: #fff;
 }
+.footer_1_0_0__heading--1 {
+  text-align: center;
+  margin: 15px 0;
+}
+.footer_1_0_0__socialItem {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .footer_1_0_0__bottom {
   border-top: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 80px;
+  padding-top: 30px;
+  margin-top: 30px;
 }/*# sourceMappingURL=style.css.map */

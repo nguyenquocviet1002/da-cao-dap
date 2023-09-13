@@ -8,9 +8,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="../header/css/style.css">
 </head>
 
 <body>
+    <header class="header_1_0_0" id="myHeader">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__50"></div>
+                <div class="header__50">
+                    <div class="header__download"><span>Download E-Cataloguespan</span> <span><img src="images/icon-down.png" alt=""></span></div>
+                    <div class="header__search">
+                        <input type="text" placeholder="Tìm kiếm từ khóa">
+                        <button class="btn__search"><img src="images/icon-search.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <a href="/" class="header__logo"><img src="images/logo.png" alt=""></a>
+                <div class="header__menu">
+                    <ul>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="https://demoapp.xlazy.net/san-pham/">Sản phẩm</a></li>
+                        <li><a href="https://demoapp.xlazy.net/distribution/">Hệ thống phân phối</a></li>
+                        <li><a href="https://demoapp.xlazy.net/support/">Hỗ trợ</a></li>
+                        <li><a href="/">Hình ảnh thực tế</a></li>
+                        <li><a href="https://demoapp.xlazy.net/demo/">Tin tức</a></li>
+                        <li><a href="https://demoapp.xlazy.net/contact/">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
     <div id="fullpage">
         <div class="section slider_1_0_0">
             <div class="slide slider_1_0_0__item slider_1_0_0__item--1">
@@ -85,6 +115,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
     <script>
+        window.onscroll = function () { fixedHeader() };
+
+fixedHeader();
+
+        function fixedHeader() {
+    let header = document.getElementById('myHeader');
+    let sticky = header.offsetTop;
+    console.log("sticky: ", sticky);
+    console.log("window.pageYOffset: ", window.pageYOffset);
+    if (window.pageYOffset > sticky) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
             spaceBetween: 10,
@@ -112,7 +159,14 @@
                         fullpage_api.moveSlideRight();
                     }, lapse);
                 }
+            },
+            onLeave: function(index, next, direction) {
+            if (next.index != 0) {
+            $('#myHeader').addClass('is-fixed');
+            } else {
+            $('#myHeader').removeClass('is-fixed');
             }
+        }
         });
 
         

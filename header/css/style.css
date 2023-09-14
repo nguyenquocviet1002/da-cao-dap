@@ -464,6 +464,33 @@ template {
 .header_1_0_0__nav ul li a:hover {
   color: #D4B68F;
 }
+.header_1_0_0__icon {
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-image: url("../images/bars.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: none;
+  transition: all 0.15s linear;
+}
+.header_1_0_0__icon.active {
+  background-image: url("../images/xmark.svg");
+}
+.header_1_0_0__backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: none;
+}
+.header_1_0_0__backdrop.show {
+  display: block;
+}
 @media (max-width: 1200px) {
   .header_1_0_0 {
     padding: 10px 0;
@@ -479,6 +506,7 @@ template {
 @media (max-width: 1024px) {
   .header_1_0_0 {
     padding: 0;
+    background-color: rgb(27, 58, 108);
   }
   .header_1_0_0__inner {
     height: 60px;
@@ -487,19 +515,27 @@ template {
   .header_1_0_0__logo {
     width: 150px;
   }
+  .header_1_0_0__box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .header_1_0_0__main {
     position: fixed;
     max-width: 280px;
     width: 100%;
     top: 60px;
     right: 0;
-    background-color: #000;
+    background-color: rgb(27, 58, 108);
     height: calc(100vh - 60px);
     overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    padding-top: 10px;
+    transform: translateX(100%);
+    transition: all 0.15s linear;
+    z-index: 1;
+  }
+  .header_1_0_0__main.show {
+    transform: translateX(0);
   }
   .header_1_0_0__top {
     flex-direction: column;
@@ -514,6 +550,9 @@ template {
   .header_1_0_0__nav ul li a {
     padding: 8px 20px;
     width: 100%;
+    display: block;
+  }
+  .header_1_0_0__icon {
     display: block;
   }
 }/*# sourceMappingURL=style.css.map */

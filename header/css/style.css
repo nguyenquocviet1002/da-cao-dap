@@ -499,9 +499,6 @@ template {
   .header_1_0_0__logo {
     width: 180px;
   }
-  .header_1_0_0__nav {
-    padding-top: 10px;
-  }
 }
 @media (max-width: 1024px) {
   .header_1_0_0 {

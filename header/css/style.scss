@@ -5,6 +5,27 @@
     padding: 20px 0;
     color: #fff;
     font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    transition: all 0.15s linear;
+    &.fixed{
+        padding: 10px 0;
+        background: rgb(27, 58, 108);
+        .header_1_0_0__logo{
+            width: 150px;
+        }
+        .header_1_0_0__top{
+            display: none;
+        }
+        .header_1_0_0__nav{
+            padding-top: 0;
+        }
+        .header_1_0_0__inner{
+            align-items: center;
+        }
+    }
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -12,6 +33,7 @@
     }
     &__logo{
         width: 210px;
+        transition: all 0.15s linear;
         img{
             width: 100%;
             height: auto;
@@ -92,6 +114,7 @@
     &__nav{
         text-transform: uppercase;
         padding-top: 20px;
+        transition: all 0.15s linear;
         ul{
             margin: 0;
             padding: 0;
@@ -146,6 +169,18 @@
     @media (max-width: 1024px){
         padding: 0;
         background-color: rgba(27, 58, 108);
+        &.fixed{
+            padding: unset;
+            .header_1_0_0__logo{
+                width: 150px;
+            }
+            .header_1_0_0__top{
+                display: flex;
+            }
+            .header_1_0_0__nav{
+                padding-top: 20px;
+            }
+        }
         &__inner{
             height: 60px;
             align-items: center;

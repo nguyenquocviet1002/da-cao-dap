@@ -358,11 +358,12 @@ template {
   font-size: 14px;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   transition: all 0.15s linear;
 }
 .header_1_0_0.fixed {
+  display: none;
   padding: 10px 0;
   background: rgb(27, 58, 108);
 }

@@ -53,6 +53,14 @@
     }
     &__colInfo{
         width: 25%;
+        p{
+            color: #fff;
+        }
+        a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
     }
     &__heading{
         font-weight: 700;

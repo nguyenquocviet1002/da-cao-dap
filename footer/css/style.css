@@ -409,6 +409,14 @@ template {
 .footer_1_0_0__colInfo {
   width: 25%;
 }
+.footer_1_0_0__colInfo p {
+  color: #fff;
+}
+.footer_1_0_0__colInfo a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
 .footer_1_0_0__heading {
   font-weight: 700;
   color: #fff;

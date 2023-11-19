@@ -5,17 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css" integrity="sha512-Go0fX6Al6Eab+N7QbSFHYBpwdcU2rbfONUcbRIS4z+9yzLlj7Xj8ao2BAOPE9Qtxdl+7iq04xzzcF4OTOWoUWg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css" integrity="sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css" integrity="sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../header/css/style.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+    <header class="header_1_0_0">
+        <div class="container">
+            <div class="header_1_0_0__inner">
+                <a href="/" class="header_1_0_0__logo">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <div class="header_1_0_0__main" id="nav">
+                    <div class="header_1_0_0__box">
+                        <div class="header_1_0_0__top">
+                            <a href="/" class="header_1_0_0__download">
+                                Download E-Catalogue
+                                <span class="header_1_0_0__iconDownload"></span>
+                            </a>
+                            <div class="header_1_0_0__search">
+                                <input type="text" placeholder="Tìm kiếm từ khoá..." class="header_1_0_0__inputSearch">
+                                <button class="header_1_0_0__btnSearch"></button>
+                            </div>
+                            <select class="header_1_0_0__language">
+                                <option value="vn">VN</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </div>
+                        <nav class="header_1_0_0__nav">
+                            <ul>
+                                <li>
+                                    <a href="/">Giới thiệu</a>
+                                </li>
+                                <li>
+                                    <a href="/">Sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="/">Hệ thống phân phối</a>
+                                </li>
+                                <li>
+                                    <a href="/">Hỗ trợ</a>
+                                </li>
+                                <li>
+                                    <a href="/">Hình ảnh thực tế</a>
+                                </li>
+                                <li>
+                                    <a href="/">Tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="/">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <button class="header_1_0_0__icon" id="icon-menu"></button>
+            </div>
+        </div>
+        <div class="header_1_0_0__backdrop"></div>
+    </header>
+
     <div id="fullpage">
         <!-- PAGE1 -->
         <section class="section page1">
@@ -107,8 +157,19 @@
     </div>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js" integrity="sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="js/index.js"></script>
-
+<script>
+    var swiper = new Swiper(".mySwiper", {
+    cssMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+</script>
 </html>

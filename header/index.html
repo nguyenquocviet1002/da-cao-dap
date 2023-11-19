@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header_1_0_0">
+        <div class="container">
+            <div class="header_1_0_0__inner">
+                <a href="/" class="header_1_0_0__logo">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <div class="header_1_0_0__main" id="nav">
+                    <div class="header_1_0_0__box">
+                        <div class="header_1_0_0__top">
+                            <a href="/" class="header_1_0_0__download">
+                                Download E-Catalogue
+                                <span class="header_1_0_0__iconDownload"></span>
+                            </a>
+                            <div class="header_1_0_0__search">
+                                <input type="text" placeholder="Tìm kiếm từ khoá..." class="header_1_0_0__inputSearch">
+                                <button class="header_1_0_0__btnSearch"></button>
+                            </div>
+                            <select class="header_1_0_0__language">
+                                <option value="vn">VN</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </div>
+                        <nav class="header_1_0_0__nav">
+                            <ul>
+                                <li>
+                                    <a href="/">Giới thiệu</a>
+                                </li>
+                                <li>
+                                    <a href="/">Sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="/">Hệ thống phân phối</a>
+                                </li>
+                                <li>
+                                    <a href="/">Hỗ trợ</a>
+                                </li>
+                                <li>
+                                    <a href="/">Hình ảnh thực tế</a>
+                                </li>
+                                <li>
+                                    <a href="/">Tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="/">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <button class="header_1_0_0__icon" id="icon-menu"></button>
+            </div>
+        </div>
+        <div class="header_1_0_0__backdrop"></div>
+    </header>
+</body>
+
+<script>
+    const showMenu = () => {
+        document.getElementById('icon-menu').addEventListener('click', (e) => {
+            if(e.target.classList.length === 1){
+                document.getElementById('nav').classList.add('show');
+                document.getElementById('icon-menu').classList.add('active');
+                document.getElementsByClassName('header_1_0_0__backdrop')[0].classList.add('show');
+            } else {
+                document.getElementById('nav').classList.remove('show');
+                document.getElementById('icon-menu').classList.remove('active');
+                document.getElementsByClassName('header_1_0_0__backdrop')[0].classList.remove('show');
+            }
+        });
+        document.getElementsByClassName('header_1_0_0__backdrop')[0].addEventListener('click', () => {
+            document.getElementById('nav').classList.remove('show');
+            document.getElementById('icon-menu').classList.remove('active');
+            document.getElementsByClassName('header_1_0_0__backdrop')[0].classList.remove('show');
+        })
+    }
+    showMenu();
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+@import 'default';
+
+.footer_1_0_0{
+    padding: 40px 0;
+    background: url('../images/footer-bg.jpg') no-repeat center;
+    &__inner{
+        display: flex;
+        &--1{
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+    &__col{
+        width: 50%;
+    }
+    &__logo{
+        display: block;
+        width: 300px;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__form{
+        width: 50%;
+    }
+    &__head{
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+    }
+    &__input{
+        border: none;
+        border-bottom: 1px solid #fff;
+        display: block;
+        background-color: transparent;
+        color: #fff;
+        outline: none;
+        width: 100%;
+        display: block;
+        padding: 15px 0;
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    &__submit{
+        border: none;
+        background-color: transparent;
+        float: right;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    &__colInfo{
+        width: 25%;
+        p{
+            color: #fff;
+        }
+        a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__heading{
+        font-weight: 700;
+        color: #fff;
+        &--1{
+            text-align: center;
+            margin: 15px 0;
+        }
+    }
+
+    &__socialItem{
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__bottom{
+        border-top: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        gap: 80px;
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+}

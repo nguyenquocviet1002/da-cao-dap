@@ -354,10 +354,24 @@ template {
   display: none;
 }
 
-.page1__banner img {
-  width: 100%;
-  height: auto;
-  display: block;
+.banner_1_0_0 {
+  background: url(../images/banner-top.jpg) center 0 no-repeat;
+  height: 250px;
+}
+.banner_1_0_0__title {
+  margin: 0;
+  text-align: center;
+  padding-top: 165px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 32px;
+}
+@media (max-width: 480px) {
+  .banner_1_0_0__title {
+    font-size: 30px;
+    line-height: 44px;
+    padding-top: 114px;
+  }
 }
 
 .page2__tabBox {

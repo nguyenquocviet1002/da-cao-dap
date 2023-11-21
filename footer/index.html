@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FOOTER</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -121,23 +121,25 @@
         new fullpage('#fullpage', {
             autoScrolling: true,
             scrollHorizontally: true,
-            credits: { enabled: false, label: 'Made with fullPage.js', position: 'right' },
+            credits: {
+                enabled: false,
+                label: 'Made with fullPage.js',
+                position: 'right'
+            },
             slidesNavigation: true,
-            afterLoad: function (origin, destination, direction) {
+            afterLoad: function(origin, destination, direction) {
                 clearInterval(g_interval);
 
                 // 1000 milliseconds lapse
                 const lapse = 5000;
 
                 if (destination.item.querySelectorAll('.slider_1_0_0 .fp-slides').length) {
-                    g_interval = setInterval(function () {
+                    g_interval = setInterval(function() {
                         fullpage_api.moveSlideRight();
                     }, lapse);
                 }
             }
         });
-
-        
     </script>
 </body>
 

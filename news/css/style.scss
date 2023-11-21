@@ -3,18 +3,27 @@
     display: none;
 }
 
-// PAGE1
-.page1 {
-    &__banner {
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
+// ----- banner_1_0_0
+.banner_1_0_0 {
+    background: url(../images/banner-top.jpg) center 0 no-repeat;
+    height: 250px;
+    &__title {
+        margin: 0;
+        text-align: center;
+        padding-top: 165px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 32px;
+    }
+    @media (max-width: 480px) {
+        &__title {
+            font-size: 30px;
+            line-height: 44px;
+            padding-top: 114px;
         }
     }
 }
 
-// END PAGE1
 // PAGE2
 .page2 {
     margin-top: 50px;
